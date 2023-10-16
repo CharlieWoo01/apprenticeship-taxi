@@ -3,9 +3,7 @@ package com.taxiservice.repository.memory;
 import com.taxiservice.models.Customer;
 import com.taxiservice.repository.CustomerRepository;
 import org.springframework.stereotype.Repository;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Repository
