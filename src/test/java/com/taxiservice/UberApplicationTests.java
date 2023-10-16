@@ -1,4 +1,4 @@
-package com.taxiservice.uber;
+package com.taxiservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

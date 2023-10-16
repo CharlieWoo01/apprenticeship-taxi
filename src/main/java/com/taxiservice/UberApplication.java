@@ -1,4 +1,4 @@
-package com.taxiservice.uber;
+package com.taxiservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
