@@ -25,6 +25,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public ResponseEntity<Customer> getRegisteredCustomer(Long id) {
-        return ResponseEntity.status(HttpStatus.OK).body(customerRepository.findById(id));
+        Customer customer = customerRepository.findById(id);
+
+        if (customer == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(customer);
     }
 }
