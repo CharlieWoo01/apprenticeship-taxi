@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "driver": {
+    "id": 1,
+    "name": "John Doe",
+    "phoneNumber": "07777777777",
+    "carType": "Volvo",
+    "maxPassengers": 0,
+    "averageRating": 0.0
+  },
+  "ratings": [
+    1.0,
+    2.0
+  ]
+}
