@@ -13,5 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 public class Ratings {
+    private Long id;
+    private Driver driver;
     private List<Double> ratings;
 }
