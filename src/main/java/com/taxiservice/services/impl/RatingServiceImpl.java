@@ -1,6 +1,6 @@
 package com.taxiservice.services.impl;
 
-import com.taxiservice.models.Ratings;
+import com.taxiservice.models.Rating;
 import com.taxiservice.repository.RatingRepository;
 import com.taxiservice.services.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,14 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public ResponseEntity<Ratings> addDriverStarRating(Ratings ratings) {
-        ratingRepository.save(ratings);
-        return ResponseEntity.status(HttpStatus.CREATED).body(ratings);
+    public ResponseEntity<Rating> addDriverStarRating(Rating rating) {
+        ratingRepository.save(rating);
+        return ResponseEntity.status(HttpStatus.CREATED).body(rating);
     }
 
     @Override
-    public ResponseEntity<Ratings> getRatingsForDriver(Long driverId) {
-        Ratings rating = ratingRepository.findRatingsByDriver(driverId);
+    public ResponseEntity<Rating> getRatingsForDriver(Long driverId) {
+        Rating rating = ratingRepository.findRatingsByDriver(driverId);
 
         if (rating == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);

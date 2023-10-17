@@ -1,8 +1,8 @@
 package com.taxiservice.repository;
 
-import com.taxiservice.models.Ratings;
+import com.taxiservice.models.Rating;
 
 public interface RatingRepository {
-    void save(Ratings rating);
-    Ratings findRatingsByDriver(Long driverId);
+    void save(Rating rating);
+    Rating findRatingsByDriver(Long driverId);
 }

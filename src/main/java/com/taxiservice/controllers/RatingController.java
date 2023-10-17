@@ -1,6 +1,6 @@
 package com.taxiservice.controllers;
 
-import com.taxiservice.models.Ratings;
+import com.taxiservice.models.Rating;
 import com.taxiservice.services.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -25,12 +24,12 @@ public class RatingController {
     }
 
     @PostMapping(value = "/rating", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Ratings> addRating(@RequestBody Ratings ratings) {
-        return ratingService.addDriverStarRating(ratings);
+    public ResponseEntity<Rating> addRating(@RequestBody Rating rating) {
+        return ratingService.addDriverStarRating(rating);
     }
 
     @GetMapping(value = "/rating/{driverId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Ratings> getRatingsForDriver(@PathVariable Long driverId) {
+    public ResponseEntity<Rating> getRatingsForDriver(@PathVariable Long driverId) {
         return ratingService.getRatingsForDriver(driverId);
     }
 }

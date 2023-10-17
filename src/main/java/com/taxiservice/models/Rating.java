@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Ratings {
+public class Rating {
     private Long id;
     private Driver driver;
     private List<Double> ratings;

@@ -1,12 +1,10 @@
 package com.taxiservice.services;
 
-import com.taxiservice.models.Driver;
-import com.taxiservice.models.Ratings;
+import com.taxiservice.models.Rating;
 import org.springframework.http.ResponseEntity;
-import java.util.List;
 
 public interface RatingService {
-    ResponseEntity<Ratings> addDriverStarRating(Ratings ratings);
+    ResponseEntity<Rating> addDriverStarRating(Rating rating);
 
-    ResponseEntity<Ratings> getRatingsForDriver(Long driverId);
+    ResponseEntity<Rating> getRatingsForDriver(Long driverId);
 }
